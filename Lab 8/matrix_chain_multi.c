@@ -1,33 +1,35 @@
-
-#include <limits.h>
 #include <stdio.h>
 
-int MatrixChainOrder(int p[], int i, int j)
+int MatrixChainMultiplication(int arr[], int n)
 {
-    if (i == j)
-        return 0;
-    int k;
-    int min = INT_MAX;
-    int count;
-
-    for (k = i; k < j; k++)
+    int minMul[n][n];
+    int j, q;
+    for (int i = 1; i < n; i++)
+        minMul[i][i] = 0;
+    for (int L = 2; L < n; L++)
     {
-        count = MatrixChainOrder(p, i, k) + MatrixChainOrder(p, k + 1, j) + p[i - 1] * p[k] * p[j];
+        for (int i = 1; i < n - L + 1; i++)
+        {
+            j = i + L - 1;
+            minMul[i][j] = INT_MAX;
+            for (int k = i; k <= j - 1; k++)
+            {
+                q = minMul[i][k] + minMul[k + 1][j] + arr[i - 1] * arr[k] * arr[j];
+                if (q < minMul[i][j])
+                {
+                    minMul[i][j] = q;
+                }
+            }
 
-        if (count < min)
-            min = count;
+            printf("P[%d][%d] : %d\n", i, j, minMul[i][j]);
+        }
     }
-
-    return min;
+    return minMul[1][n - 1];
 }
-
 int main()
 {
-    int arr[] = {1, 2, 3, 4, 3};
-    int N = sizeof(arr) / sizeof(arr[0]);
-
-    printf("Minimum number of multiplications is %d ",
-           MatrixChainOrder(arr, 1, N - 1));
-    getchar();
+    int arr[] = {2, 2, 4, 2, 6};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    printf("Minimum number of multiplications required for the matrices multiplication is %d ", MatrixChainMultiplication(arr, size));
     return 0;
 }

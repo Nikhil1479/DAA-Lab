@@ -21,7 +21,7 @@ int main()
 {
     srand(0);
     int n;
-    printf("Enter a number: ");
+    printf("Number of random numbers: ");
     scanf("%d", &n);
     int A[n];
     for (int i = 0; i < n; i++)

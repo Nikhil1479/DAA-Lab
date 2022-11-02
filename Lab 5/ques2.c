@@ -15,6 +15,17 @@ void insertionSort(int a[], int n)
         a[j + 1] = currentElement;
     }
 }
+/**
+ * MergeSort(a, l, h)
+ *
+ * If the size of the array is less than 16, then use insertion sort. Otherwise, recursively sort the
+ * left half of the array, recursively sort the right half of the array, and then merge the two halves
+ *
+ * @param a The array to be sorted
+ * @param l left index of the sub-array of arr to be sorted
+ * @param m the size of the array
+ * @param h the highest index of the array
+ */
 void merge(int a[], int l, int m, int h)
 {
     int i, j, k;
@@ -53,6 +64,15 @@ void merge(int a[], int l, int m, int h)
         a[k++] = q[j++];
 }
 
+/**
+ * MergeSort(a, l, h) = MergeSort(a, l, mid) + MergeSort(a, mid + 1, h) + merge(a, l, mid, h)
+ *
+ * @param a the array to be sorted
+ * @param l the leftmost index of the array
+ * @param h the highest index of the array
+ *
+ * @return the sorted array.
+ */
 void MergeSort(int a[], int l, int h)
 {
     int n = h - l + 1;
