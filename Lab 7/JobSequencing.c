@@ -20,7 +20,7 @@ int minValue(int x, int y)
 
 int main(void)
 {
-    // variables
+
     int i, j;
 
     // jobs with deadline and profit

@@ -11,7 +11,7 @@ int MatrixChainMultiplication(int arr[], int n)
         for (int i = 1; i < n - L + 1; i++)
         {
             j = i + L - 1;
-            minMul[i][j] = INT_MAX;
+            minMul[i][j] = 999999999;
             for (int k = i; k <= j - 1; k++)
             {
                 q = minMul[i][k] + minMul[k + 1][j] + arr[i - 1] * arr[k] * arr[j];
@@ -28,7 +28,7 @@ int MatrixChainMultiplication(int arr[], int n)
 }
 int main()
 {
-    int arr[] = {2, 2, 4, 2, 6};
+    int arr[] = {1, 2, 3, 4, 3};
     int size = sizeof(arr) / sizeof(arr[0]);
     printf("Minimum number of multiplications required for the matrices multiplication is %d ", MatrixChainMultiplication(arr, size));
     return 0;

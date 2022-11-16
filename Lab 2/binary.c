@@ -14,8 +14,9 @@ int binarySearch(int a[], int beg, int end, int val)
         {
             return binarySearch(a, mid + 1, end, val);
         }
-        /* if the item to be searched is greater than middle, then it can only be in right subarray */
-        else
+        ws3
+            /* if the item to be searched is greater than middle, then it can only be in right subarray */
+            else
         {
             return binarySearch(a, beg, mid - 1, val);
         }

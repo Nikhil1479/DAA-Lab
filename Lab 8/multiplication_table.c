@@ -15,3 +15,13 @@ int main()
     multiplication(10, 1);
     return 0;
 }
+
+/*
+int n;
+if(n==0 || n==1){
+    return 1;234444444444444
+}
+else{
+    return fact(n) * fact(n-1);
+}
+*/
