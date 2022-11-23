@@ -41,6 +41,7 @@ int main()
         {
             scanf("%d", &G[i][j]);
             if (G[i][j] != 0)
+                /* Storing the edges in the array edge. */
                 edge[k][0] = i, edge[k++][1] = j;
         }
 
