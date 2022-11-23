@@ -2,15 +2,15 @@
 int main()
 {
     int n, n1, rows, cols, a[100][100], b[100][100], z[100][100], sum[100][100], i, j;
-    printf(" Enter Number of Matrices : ");
+    printf(" Enter Number of Matrices you want to enter : ");
     scanf("%d", &n);
 
-    printf("Enter the number of rows: ");
+    // printf("Enter the number of rows: ");
     scanf("%d", &rows);
-    printf("Enter the number of columns: ");
+    // printf("Enter the number of columns: ");
     scanf("%d", &cols);
 
-    printf("\n\t Input elements in matrix a :\n");
+    printf("\n\t Enter matrix a :\n");
     for (i = 0; i < rows; ++i)
     {
         for (j = 0; j < cols; ++j)
@@ -20,7 +20,7 @@ int main()
         }
     }
 
-    printf("\n\t Input elements in matrix b :\n");
+    printf("\n\t Enter matrix b :\n");
     for (i = 0; i < rows; ++i)
     {
         for (j = 0; j < cols; ++j)

@@ -60,12 +60,6 @@ void quickSort(int A[], int lb, int ub)
     }
 }
 
-/**
- * The function takes an array, a starting index, and an ending index, and then recursively calls
- * itself on the left and right sides of the array, until the array is sorted
- *
- * @return The array is being sorted.
- */
 int main()
 {
     int A[10] = {5, 4, 7, 8, 2, 12, 4, 5, 654, 79};

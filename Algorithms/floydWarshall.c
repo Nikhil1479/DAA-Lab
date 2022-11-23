@@ -1,13 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
- * For every pair of vertices (u, v), if there is a path from u to v that goes through k, then the
- * shortest path from u to v is the shortest path from u to k plus the shortest path from k to v
- *
- * @param graph The adjacency matrix of the graph.
- * @param n number of vertices
- */
 void floydWarshall(int **graph, int n)
 {
     int i, j, k;

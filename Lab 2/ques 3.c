@@ -6,9 +6,9 @@ int main()
 
     char s[100], s1[100];
 
-    printf("Enter first large number: ");
+    printf("Enter num1: ");
     gets(s);
-    printf("Enter second large number: ");
+    printf("Enter num2: ");
     gets(s1);
 
     int a[101], b[101], c[102], d[101];
@@ -16,7 +16,7 @@ int main()
     for (int i = 0; i < strlen(s); i++)
     {
 
-        a[i] = s[i] - 48; // storing numbers into array
+        a[i] = s[i] - 48;
 
         b[i] = s1[i] - 48;
     }
@@ -26,14 +26,14 @@ int main()
     for (int i = strlen(s) - 1; i >= 0; i--)
     {
 
-        sum = (a[i] + b[i]) + carry; // adding one by one digit
+        sum = (a[i] + b[i]) + carry;
 
         if (sum >= 10)
         {
 
             carry = 1;
 
-            c[i + 1] = sum - 10; // taking care of carry
+            c[i + 1] = sum - 10;
         }
 
         else
